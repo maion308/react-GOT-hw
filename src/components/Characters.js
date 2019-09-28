@@ -29,9 +29,10 @@ class Characters extends Component {
         return(
             <div>
                 {characters.map((character) => {
+                    let mixed = Math.floor(Math.random() * characters.length)
                     return(
                     <div className='list' style={{borderBottom: 'solid 1px'}}>
-                            <div>Name: {checkName(character)}</div>
+                            <div>Name: {checkName(mixed)}</div>
                             <div>Gender: {character.gender}</div>
                             <div>Culture: {character.culture}</div>
                     </div>
